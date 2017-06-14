@@ -1,9 +1,9 @@
 package org.tuxdevelop.spring.batch.lightmin.util;
 
-import lombok.extern.slf4j.Slf4j;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import lombok.extern.slf4j.Slf4j;
 
 /**
  * @author Marcel Becker
@@ -44,10 +44,11 @@ public final class DurationHelper {
             endTime = current;
             log.info("endTime was null, set to current date");
         }
-        final Long duration = endTime.getTime() - startTime.getTime();
+        Long duration = endTime.getTime() - startTime.getTime();
         if (duration < 0) {
-            throw new IllegalArgumentException("The duration may not be negative! Values [startTime:" + startTime
-                    + "], [endTime:" + endTime + "], [duration:" + duration + "]");
+            //throw new IllegalArgumentException("The duration may not be negative! Values [startTime:" + startTime
+            //        + "], [endTime:" + endTime + "], [duration:" + duration + "]");
+            duration = 0L;
         }
         return format(new Date(duration));
     }

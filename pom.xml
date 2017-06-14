@@ -4,7 +4,7 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.tuxdevelop</groupId>
+    <groupId>com.my3d</groupId>
     <artifactId>spring-batch-lightmin</artifactId>
     <packaging>pom</packaging>
 
@@ -32,7 +32,7 @@
         </developer>
     </developers>
 
-    <version>0.4.1-SNAPSHOT</version>
+    <version>0.4.1</version>
 
     <modules>
         <module>spring-batch-lightmin-core</module>
@@ -161,14 +161,27 @@
 
 
     <!-- distribution management -->
+<!--     <distributionManagement> -->
+<!--         <repository> -->
+<!--             <id>ossrh</id> -->
+<!--             <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url> -->
+<!--         </repository> -->
+<!--         <snapshotRepository> -->
+<!--             <id>ossrh</id> -->
+<!--             <url>https://oss.sonatype.org/content/repositories/snapshots</url> -->
+<!--         </snapshotRepository> -->
+<!--     </distributionManagement> -->
+    
     <distributionManagement>
         <repository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+            <id>my3d-libs-release</id>
+            <name>my3d-libs-release</name>
+            <url>http://frparpicdbx:8081/artifactory/my3d-libs-release/</url>
         </repository>
         <snapshotRepository>
-            <id>ossrh</id>
-            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <id>my3d-libs-snapshot</id>
+            <name>my3d-libs-snapshot</name>
+            <url>http://frparpicdbx:8081/artifactory/my3d-libs-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 
